@@ -9,10 +9,15 @@
 <body>
     <h1>DSA Visualizer</h1>
     <div id="visualization-area"></div>
+    
     <div id="controls">
         <button onclick="startSort()">Start Sort</button>
         <button onclick="pauseSort()">Pause</button>
+        <button onclick="resetSort()">Reset</button>
+        <label for="speed">Speed:</label>
+        <input type="range" id="speed" min="50" max="1000" value="200">
     </div>
+
     <script src="scripts/main.js"></script>
 </body>
 </html>
