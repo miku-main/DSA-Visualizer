@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>DSA Visualizer</h1>
+    <h2 id="algorithm-name">Algorithm: Bubble Sort</h2>
     <div id="visualization-area"></div>
     
     <div id="controls">
@@ -16,6 +17,13 @@
         <button onclick="resetSort()">Reset</button>
         <label for="speed">Speed:</label>
         <input type="range" id="speed" min="50" max="1000" value="200">
+
+        <label for="algorithm">Select Algorithm:</label>
+        <select id="algorithm" onchange="setAlgorithm(this.value)">
+            <option value="bubble">Bubble Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="selection">Selection Sort</option>
+        </select>
     </div>
 
     <script type="module" src="scripts/main.js"></script>
