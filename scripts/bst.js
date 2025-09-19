@@ -25,7 +25,7 @@ export class BST {
     insertNode(node, newNode) {
         if (newNode.value < node.value) {
             if (node.left === null) {
-                node.left = newNodel;
+                node.left = newNode;
             } else {
                 this.insertNode(node.left, newNode);
             }

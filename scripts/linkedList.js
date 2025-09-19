@@ -40,7 +40,7 @@ export class LinkedList {
 
         let current = this.head;
         while (current.next && current.next.value !== value) {
-            current - current.next;
+            current = current.next;
         }
 
         if (current.next) {
