@@ -3,11 +3,13 @@ import { insertionSort } from "./sorting/insertion.js";
 import { bubbleSort } from "./sorting/bubble.js";
 import { drawBars } from "./utils.js";
 import { LinkedList } from "./linkedList.js";
+import { BST } from "./bst.js";
 
 let array = [50, 80, 30, 90, 60, 20];
 let sorting = false;
-let linkedList = new LinkedList();
 let currentAlgorithm = bubbleSort; // Default to Bubble Sort for now
+let linkedList = new LinkedList();
+let bst = new BST();
 
 const speedInput = document.getElementById("speed");
 
@@ -75,3 +77,15 @@ window.removeLinkedListNode = function() {
 window.traverseLinkedList = async function () {
     await linkedList.traverse();
 };
+
+window.insertBSTNode = function () {
+    const value = parseInt(prompt("Enter value to insert"));
+    if (!isNaN(value)) {
+        bst.insert(value);
+        drawBars(bst.toArray());
+    }
+};
+
+window.traverseBST = async function () {
+    await bst.traverseInOrder();
+}
